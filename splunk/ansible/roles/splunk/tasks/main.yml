@@ -1,0 +1,19 @@
+- name: Check installer exists
+  win_stat:
+    path: c:\Users\vagrant\splunkforwarder-9.1.2-b6b9c8185839-x64-release.msi
+  register: installer_file
+
+- name: Download Installer
+  win_get_url:
+    url: "https://download.splunk.com/products/universalforwarder/releases/9.1.2/windows/splunkforwarder-9.1.2-b6b9c8185839-x64-release.msi"
+    dest: 'c:\Users\vagrant\splunkforwarder-9.1.2-b6b9c8185839-x64-release.msi'
+  when: not installer_file.stat.exists
+
+- name: Check Splunk Exists
+  win_stat:
+    path: "C:\\Program Files\\SplunkUniversalForwarderi\\bin\\splunk.exe"
+  register: splunk_installed
+
+- name: Install splunk
+  win_command: msiexec.exe /i C:\Users\vagrant\splunkforwarder-9.1.2-b6b9c8185839-x64-release.msi RECEIVING_INDEXER="192.168.10.51:9997" WINEVENTLOG_SEC_ENABLE=1 WINEVENTLOG_SYS_ENABLE=1 AGREETOLICENSE=Yes /quiet
+  when: not splunk_installed.stat.exists

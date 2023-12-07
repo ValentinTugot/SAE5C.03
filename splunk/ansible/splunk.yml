@@ -1,0 +1,6 @@
+---
+
+- name: "Splunk Install"
+  hosts: default
+  roles:
+    - { role: 'splunk', tags: 'splunk' }

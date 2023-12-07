@@ -1,0 +1,6 @@
+---
+
+- name: "Splunk Remove"
+  hosts: default
+  roles:
+    - { role: 'clean', tags: 'clean' }
