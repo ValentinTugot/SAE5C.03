@@ -82,7 +82,7 @@ service_principal_name = "http/openwec.sevenkingdoms.local@SEVENKINGDOMS.LOCAL"
 root@openwec:~# openwec -c /etc/openwec.conf.toml db init
 ```
 
-### Configuration de la subscriptions avec les règles de l'ANSSI
+### Configuration de la subscription avec les règles de l'ANSSI
 
 ```bash
 # Recupère les règles de l'ANSSI
