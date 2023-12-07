@@ -256,7 +256,7 @@ root@openwec:~# ls /openwec/log/
 On voit bien les 5 servers remontés dans le dossier log, on peut verifier le contenu dans un fichier pour le serveur 192.168.10.12 par exemple:
 
 ```bash
-root@openwec:~# tail -f /openwec/log/192.168.10.12/MEEREEN@ESSOS.LOCAL/messages
+root@openwec:~# tail -f /openwec/log/192.168.10.12/MEEREEN@ESSOS.LOCAL/messages | jq
 ```
 
 ![Logs](img/logs-jq.png)
