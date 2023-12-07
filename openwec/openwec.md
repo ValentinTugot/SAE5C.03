@@ -259,6 +259,6 @@ On voit bien les 5 servers remontés dans le dossier log, on peut verifier le co
 root@openwec:~# tail -f /openwec/log/192.168.10.12/MEEREEN@ESSOS.LOCAL/messages
 ```
 
-![Logs](img/logs.png)
+![Logs](img/logs-jq.png)
 
 Les logs remontent bien dans notre serveur OpenWEC.
