@@ -143,7 +143,7 @@ ansible-playbook -i inventory splunk.yml
 
 ![Ansible](img/playbook.png)
 
-Ansible s'execute sans erreur, l'agent à bien était installé.
+Ansible s'execute sans erreur, les agents ont bien étaient installés.
 
 ## 3. Verification de l'installation
 
@@ -153,6 +153,6 @@ On se rend dans __Search & Reporting__ puis dans __Data Summary__, on peut voir 
 
 On prent l'exemple de BRAAVOS on peut regarder les logs qu'il remonte:
 
-![Alt text](img/braavos.png)
+![Windows](img/braavos.png)
 
 On peut voir ici, des logs de sécurité Windows remonter.
