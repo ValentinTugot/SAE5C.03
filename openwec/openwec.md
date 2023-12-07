@@ -214,6 +214,12 @@ slot KVNO Principal
 ktutil:  wkt /etc/fullwec.keytab
 ```
 
+Il faut ajouter les droits à l'utilisateur openwec sur la keytab:
+
+```bash
+root@openwec:~# chown -R openwec:openwec /etc/fullwec.keytab
+```
+
 ## 4. Démarrage du serveur
 
 On démarre le serveur avec le service systemd créée précedemment
